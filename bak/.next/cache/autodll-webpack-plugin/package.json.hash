@@ -1,0 +1,1 @@
+{"name":"jpangan","version":"1.0.0","scripts":{"dev":"next","build":"next build","start":"next start -p $PORT"},"license":"ISC","dependencies":{"@emotion/core":"^10.0.27","@emotion/styled":"^10.0.27","next":"latest","react":"^16.12.0","react-dom":"^16.12.0","react-markdown":"^4.0.6"},"readme":"ERROR: No README data found!","_id":"jpangan@1.0.0"}
