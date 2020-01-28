@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-export default function App() {
+function App() {
 	return <div>
 		<Head>Johneric Pangan</Head>
 		<Wrapper>
@@ -33,3 +33,19 @@ export default function App() {
 		<Global styles={css`${globalStyle}`}></Global>
 	</div>
 }
+
+const getUA = args => ({
+	ua: args.req
+		? args.req.headers['user-agent']
+		: navigator.userAgent
+});
+
+App.getInitialProps = async args => {
+	const ua = getUA(args);
+	console.log(ua);
+	return {
+		ua
+	};
+}
+
+export default App;
