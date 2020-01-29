@@ -3,6 +3,8 @@ import {Global, css} from '@emotion/core';
 import Head from 'next/head';
 import globalStyle from '../assets/styles/globalStyle';
 
+import Desktop from '../components/Layouts/Desktop';
+
 const Wrapper = styled.div`
 	width: 100vw;
 	height: 100vh;
