@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 import {Global, css} from '@emotion/core';
 import Head from 'next/head';
 import globalStyle from '../assets/styles/globalStyle';
-
-import Desktop from '../components/Layouts/Desktop';
+import Desktop from '../components/Desktop';
 
 const Wrapper = styled.div`
 	width: 100vw;
