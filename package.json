@@ -2,9 +2,14 @@
   "name": "jpangan",
   "version": "1.0.0",
   "scripts": {
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
     "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start -p $PORT",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "license": "ISC",
   "dependencies": {
@@ -14,5 +19,12 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-markdown": "^4.0.6"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-regenerator": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@testing-library/jest-dom": "^5.0.2",
+    "@testing-library/jest-native": "^3.1.0",
+    "@testing-library/react": "^9.4.0"
   }
 }

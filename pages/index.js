@@ -3,6 +3,8 @@ import {Global, css} from '@emotion/core';
 import Head from 'next/head';
 import globalStyle from '../assets/styles/globalStyle';
 
+import Desktop from '../components/Layouts/Desktop';
+
 const Wrapper = styled.div`
 	width: 100vw;
 	height: 100vh;
@@ -20,7 +22,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-function App() {
+export default function App() {
 	return <div>
 		<Head>Johneric Pangan</Head>
 		<Wrapper>
@@ -33,19 +35,3 @@ function App() {
 		<Global styles={css`${globalStyle}`}></Global>
 	</div>
 }
-
-const getUA = args => ({
-	ua: args.req
-		? args.req.headers['user-agent']
-		: navigator.userAgent
-});
-
-App.getInitialProps = async args => {
-	const ua = getUA(args);
-	console.log(ua);
-	return {
-		ua
-	};
-}
-
-export default App;
